@@ -2,6 +2,7 @@
   --primary-text-color: #333333;
   --title-text: #000000;
   --accent-color: #ffffff;
+  --card-item: 4;
 }
 .link {
   text-decoration: none;
@@ -63,21 +64,26 @@ body {
   overflow: hidden;
 }
 
-.categories-list {
+.card-set {
   display: flex;
   flex-wrap: wrap;
   margin-top: -32px;
   margin-right: -32px;
 }
-.categories-item {
+.card-item {
   margin-top: 32px;
   margin-right: 32px;
   overflow: hidden;
 
   border: 1px solid #d9d9de;
   border-radius: 6px;
-  width: calc((100% / 4) - 32px);
+  width: calc(100% / var(--card-item) - 32px);
 }
+
+.service-list {
+  --card-item: 3;
+}
+
 .categories-subtitle {
   padding: 13px 19px 16px;
   font-weight: 500;
